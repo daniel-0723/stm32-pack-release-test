@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package schemaVersion="1.7.46" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>Macronix</vendor>
+    <name>X-CUBE-MXIC-Flash-Driver</name>
+    <description>Add Macronix QSPI/OSPI Flash driver support.</description>
+    <url>https://www.macronix.com.tw/fileSoftware/Macronix.X-CUBE-MXIC-Flash-driver.1.0.0.pack/</url>
+    <license>LICENSE.txt</license>
+    <releases>
+        <release date="2025-09-26" url="https://www.mxic.com.tw/fileSoftware/Macronix.X-CUBE-MXIC-Flash-Driver.1.0.0.pack" version="1.0.0">Add Macronix QSPI/OSPI Flash driver support.</release>
+    </releases>
+    <keywords>
+        <keyword>CUBE_RULES_COMPLIANT</keyword>
+    </keywords>
+    <taxonomy>
+        <description Cclass="Board Part">Board Part</description>
+    </taxonomy>
+    <conditions>
+        <condition id="Require core support">
+            <accept Dcore="Cortex-M3"/>
+            <accept Dcore="Cortex-M4"/>
+            <accept Dcore="Cortex-M7"/>
+            <accept Dcore="Cortex-M33"/>
+            <accept Dcore="Cortex-M55"/>
+        </condition>
+    </conditions>
+    <components>
+        <bundle Cbundle="Flash driver" Cclass="Board Part" Cversion="1.0.0">
+            <description>Add Macronix QSPI/OSPI Flash driver support.</description>
+            <doc>Documentation/Macronix Flash driver STM32Cube ExpansionPack_UserGuide.pdf</doc>
+            <component Cgroup="Flash driver" Csub="QSPI" maxInstances="1">
+                <description>Driver is implemented on STM32 Quad-SPI interface (QUADSPI) &amp; meet BSP 2.1 specific.</description>
+                <files>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_128M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_16M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_1G.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_1M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_256M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_2G.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_2M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_32M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_4M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_512K.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_512M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_64M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_SNOR_8M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/QSPI/MXIC_xSPINOR.h"/>
+                    <file category="source" name="Drivers/BSP/Components/QSPI/MXIC_xSPINOR_QUADSPI.c"/>
+                </files>
+            </component>
+            <component Cgroup="Flash driver" Csub="OSPI" maxInstances="1">
+                <description>Driver is implemented on STM32 OCTO-SPI interface &amp; meet BSP 2.1 specific.</description>
+                <files>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_128M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_16M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_1G.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_1M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_256M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_2G.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_2M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_32M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_4M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_512K.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_512M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_64M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_SNOR_8M.h"/>
+                    <file category="header" name="Drivers/BSP/Components/OSPI/MXIC_xSPINOR.h"/>
+                    <file category="source" name="Drivers/BSP/Components/OSPI/MXIC_xSPINOR_OCTOSPI.c"/>
+                </files>
+            </component>
+        </bundle>
+    </components>
+</package>
